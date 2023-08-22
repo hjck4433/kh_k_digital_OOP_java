@@ -15,7 +15,8 @@ public class PrimeSum {
         for(int i = 2; i < n; i++) sum += prime(i);
         System.out.println(sum);
 
-        Number num = new Number(12);
+        // ==============================
+        Number num = new Number(n);
         num.getPrimeSum();
 
     }
