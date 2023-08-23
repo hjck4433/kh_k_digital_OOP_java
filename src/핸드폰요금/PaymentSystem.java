@@ -13,18 +13,15 @@ public class PaymentSystem {
         System.out.print("통화 횟수 : ");
         int n = sc.nextInt(); // 통화 횟수
         Payment phone = new Payment(n);
-        phone.setCallTime(); // 통화 횟수 만큼 배열 크기 지정
 
-        for (int i = 0; i < n; i++) { // 배열에 통화 길이 대입
+        // 배열에 통화 길이 대입
+        for (int i = 0; i < n; i++) {
             int call = sc.nextInt();
             phone.callTimeArr(call);
         }
         //phone.getCallTime(); // 배열 확인
 
-        phone.priceY(); // Y요금제 계산
-        phone.priceM(); // M요금제 계산
-
-        phone.getPayment(); // 저렴한 요금제 출력
+        phone.cheaperPayment(); // 저렴한 요금제 정보 출력
 
 
         // 강사님 풀이
