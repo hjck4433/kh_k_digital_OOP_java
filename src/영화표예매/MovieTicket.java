@@ -8,9 +8,9 @@ public class MovieTicket {
     int[] seat;
     int ticketPrice;
 
-    MovieTicket(int price, int seatVal) {
+    MovieTicket(int price, int seatNum) {
         ticketPrice = price;
-        seat = new int [seatVal];
+        seat = new int [seatNum];
     }
     
     // 판매된 좌석의 개수를 확인해 총 판매 금액을 구해서 반환

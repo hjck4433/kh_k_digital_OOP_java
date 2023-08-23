@@ -3,6 +3,8 @@ package 아이패드만들기;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
+import static java.lang.Thread.sleep;
+import static 아이패드만들기.Common.*;
 
 public class IPadPro {
     int screen; // 11인치, 12.9인치
@@ -69,7 +71,7 @@ public class IPadPro {
     void setNetwork() {
         Scanner sc = new Scanner(System.in);
         while(true) {
-            System.out.print("용량 선택 [1] Wi-Fi [2] Wi-Fi+Cellular : ");
+            System.out.print("네트워크 선택 [1] Wi-Fi [2] Wi-Fi+Cellular : ");
             network = sc.nextInt();
             if(network == 1 || network == 2) return;
             System.out.println("네트워크를 다시 선택 하세요.");
@@ -80,18 +82,60 @@ public class IPadPro {
     void setName() {
         Scanner sc = new Scanner(System.in);
         System.out.print("각인 서비스를 신청하시겠습니까? (yes / no) : ");
-        String service = sc.next();
+        String service = sc.nextLine();
         if(service.equalsIgnoreCase("yes")){
             System.out.print("이름을 입력 하세요 : ");
-            name = sc.next();
+            name = sc.nextLine();
         }
     }
 
+    // 일련번호 생성
     void setSerialNum() {
         String screenStr = (screen == 1) ? "11" : "13";
         String[] memStr = {"", "128", "256", "512", "1024"};
         String netStr = (network == 1) ? "W" : "C";
         serialNum = "iPad" + screenStr + memStr[memory] + netStr + productDate; // 일련번호 생성
     }
+
+    // 진행도 (30초 대기)
+    void progressPad() throws InterruptedException { // Interrupt 예외
+        int cnt = 0;
+        while(true) {
+            sleep(300); // 프로그램을 잠깐 잠재움
+            cnt++;
+            System.out.print(" << iPad Pro 제작 중 : [" + cnt + "%] >>");
+            System.out.print("\r");
+            if(cnt >= 100) break;
+        }
+    }
+
+    // 다른 방식으로 표현
+    void progressPad2() throws InterruptedException { // Interrupt 예외
+        int cnt = 40;
+        int cnt2 = 0;
+        while(true) {
+            sleep(750); // 프로그램을 잠깐 잠재움
+            cnt--;
+            cnt2++;
+            System.out.print(" << iPad Pro 제작 중 : [" + "■".repeat(cnt2)+ " ".repeat(cnt) + "] >>");
+            System.out.print("\r");
+            if(cnt <= 0) break;
+        }
+    }
+
+
+    void productPad() {
+        System.out.println("=".repeat(5) + PRODUCT + "사양" + "=".repeat(5));
+        System.out.println("화면 크기 : " + screenType[screen]);
+        System.out.println("제품 색상 : " + colorType[color]);
+        System.out.println("제품 용량 : " + memType[memory]);
+        System.out.println("네트워크 : " + netType[network]);
+        System.out.println("이름 : " + name);
+        System.out.println("일련 번호 : " + serialNum);
+        System.out.println("-".repeat(40));
+    }
+
+
+
 
 }
