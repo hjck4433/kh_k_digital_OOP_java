@@ -123,7 +123,7 @@ public class IPadPro {
         }
     }
 
-
+    // 정보
     void productPad() {
         System.out.println("=".repeat(5) + PRODUCT + "사양" + "=".repeat(5));
         System.out.println("화면 크기 : " + screenType[screen]);
@@ -134,8 +134,4 @@ public class IPadPro {
         System.out.println("일련 번호 : " + serialNum);
         System.out.println("-".repeat(40));
     }
-
-
-
-
 }
