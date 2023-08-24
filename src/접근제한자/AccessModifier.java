@@ -12,7 +12,7 @@ public class AccessModifier {
 
         Child child = new Child("엔지니어");
         System.out.println(child.getName());
-        System.out.println(child.getMoney());
+        //System.out.println(child.getMoney());
         System.out.println(child.getAddr());
 
     }
@@ -22,9 +22,9 @@ class Child extends Parent {
     public Child(String jobs) {
         this.jobs = jobs;
     }
-    public String getMoney() {
-        return money; // Parent에서 private이 되면 접근 제한 됨 // default+다른 패키지 => 같은 패키지 내에서만 가능
-    }
+//    public String getMoney() {
+//        return money; // Parent에서 private이 되면 접근 제한 됨 // default+다른 패키지 => 같은 패키지 내에서만 가능
+//    }
     public String getName() {
         return name;
     }
