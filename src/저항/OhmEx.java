@@ -41,6 +41,8 @@ public class OhmEx {
 
         System.out.println(sum);
 
+
+
         // 강사님 풀이
 //        String[] color = {"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"};
 //        int frt = 0, sec = 0, thd = 0;
