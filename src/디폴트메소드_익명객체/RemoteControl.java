@@ -1,4 +1,4 @@
-package 디폴트메소드;
+package 디폴트메소드_익명객체;
 
 public interface RemoteControl {
     int MAX_VOLUME  = 100; // final static 추가 됨 / 상속이 안됨

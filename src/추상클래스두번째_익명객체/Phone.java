@@ -1,4 +1,4 @@
-package 추상클래스두번째;
+package 추상클래스두번째_익명객체;
 
 // Phone은 인스턴스화 될 수 없음
 public abstract class Phone {

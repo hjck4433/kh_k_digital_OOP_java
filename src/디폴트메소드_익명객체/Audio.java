@@ -1,4 +1,4 @@
-package 디폴트메소드;
+package 디폴트메소드_익명객체;
 
 public class Audio implements RemoteControl {
     private int volume;

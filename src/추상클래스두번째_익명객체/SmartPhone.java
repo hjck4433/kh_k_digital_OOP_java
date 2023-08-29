@@ -1,4 +1,4 @@
-package 추상클래스두번째;
+package 추상클래스두번째_익명객체;
 
 public class SmartPhone extends Phone {
     public SmartPhone(String name) {
