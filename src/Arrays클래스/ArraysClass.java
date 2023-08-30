@@ -11,12 +11,13 @@ public class ArraysClass {
         //Arrays.sort(arr, Collections.reverseOrder()); //내림차순 // Collections는 기본형을 허용하지 않음 내림차순 정렬을 하려면 참조타입으로 배열을 선언
         //for(int e : arr) System.out.print(e +" ");
 
-        // 정렬 오버라이딩 : 재정의
+        // 정렬 오버라이딩 : 재정의 // 익명의 객체 사용
         Arrays.sort(arr, new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
                 if(o1 > o2) return 1; // 오름 차순
                 //if(o1 < o2) return 1; // 내림 차순
+                else if (o1.equals(o2)) return 0;
                 return -1; // 현상태 유지
             }
         });

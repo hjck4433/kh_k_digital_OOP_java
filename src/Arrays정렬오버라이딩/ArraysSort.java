@@ -12,7 +12,7 @@ public class ArraysSort {
         Arrays.sort(fruit, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
-                if(o1.length() > o2.length()) return 1;
+                if(o1.length() > o2.length()) return 1; // 순서 바꾸기
                 else {
                     if(o1.length() == o2.length()) { // 길이가 같으면 사전 순 정렬 조건
                         // 비교 대상이 객체가 작으면 음수 반환

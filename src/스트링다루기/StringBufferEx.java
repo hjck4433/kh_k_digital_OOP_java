@@ -1,4 +1,7 @@
 package 스트링다루기;
+
+import java.util.StringTokenizer;
+
 // StringBuffer(synchronize(동기화)지원), StringBuilder(지원 하지 않음) 둘 다 문자열을 추가하거나 변경할 때 사용
 // StringBuffer => 멀티쓰레드 환경에서 안전 (lock/unlock) / StringBuilder => 값이 깨질 수 있음
 // String 자료형과 어떤 차이가 있는지만 이해하면 됨
@@ -9,6 +12,9 @@ public class StringBufferEx {
         sb.append(" ");
         sb.append("java");
         System.out.println(sb);
+//        String abc = sb.toString();
+//        System.out.println("abc : " + abc);
+        String[] abc = sb.toString().split(" ");
 
 
         // 더할 때마다 새로 만들어짐 // 짧은 경우에는 String 유리
@@ -17,6 +23,7 @@ public class StringBufferEx {
         st += " ";
         st += "java";
         System.out.println(st);
+
 
         StringBuilder sb2 = new StringBuilder();
         sb2.append("jump to java");
