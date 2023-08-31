@@ -18,7 +18,16 @@ public class TreeSetMain {
         for(Integer e : ts) System.out.print(e + " ");
         System.out.println();
 
-        TreeSet<String> ts2 = new TreeSet<>();
+        TreeSet<String> ts2 = new TreeSet<>(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                if(o1.length() > o2.length()) return 1;
+                else {
+                    if(o1.length() == o2.length()) return o1.compareTo(o2);
+                    return -1;
+                }
+            }
+        });
         ts2.add("10");
         ts2.add("300");
         ts2.add("2000");
