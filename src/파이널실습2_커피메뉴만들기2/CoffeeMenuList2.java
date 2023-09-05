@@ -100,6 +100,7 @@ public class CoffeeMenuList2 {
     public static void writeMenu() {
         try{
             FileOutputStream fos = new FileOutputStream("d:/tmp/MenuList.db");
+            //FileOutputStream fos = new FileOutputStream("c:/tmp/MenuList.db"); //노트북
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(map);
             oos.flush();

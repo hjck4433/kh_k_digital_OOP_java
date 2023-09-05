@@ -17,6 +17,7 @@ public class BufferStreamEx {
 //        fis = new FileInputStream("src/입출력_성능향상보조스트림/햄스터이미지.jpg");
 //        bis = new BufferedInputStream(fis);
 //        fos = new FileOutputStream("d:/tmp/hamster_no_buffer.jpg");
+//        fos = new FileOutputStream("c:/tmp/hamster_no_buffer.jpg"); // 노트북
 //        start = System.currentTimeMillis();
 //        while ((data = bis.read()) != -1) {
 //            fos.write(data);
@@ -29,6 +30,7 @@ public class BufferStreamEx {
         fis = new FileInputStream("src/입출력_성능향상보조스트림/햄스터이미지.jpg");
         bis = new BufferedInputStream(fis);
         fos = new FileOutputStream("d:/tmp/hamster_buffer.jpg");
+        //fos = new FileOutputStream("c:/tmp/hamster_buffer.jpg"); // 노트북
         bos = new BufferedOutputStream(fos);
         start = System.currentTimeMillis();
         while((data = bis.read()) != -1) {

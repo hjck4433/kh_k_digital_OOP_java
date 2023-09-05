@@ -9,6 +9,7 @@ public class ReadTxtFile {
         FileInputStream fis = null;
         try{
             fis = new FileInputStream("d:/tmp/score.txt");
+            //fis = new FileInputStream("c:/tmp/score.txt"); // 노트북
         }catch (IOException e) {
             System.out.println("파일을 찾을 수 없습니다.");
         }

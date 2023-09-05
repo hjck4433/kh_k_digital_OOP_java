@@ -22,6 +22,7 @@ public class CoffeeMenuListInput {
     public static Map<String, MenuInfo2> readMenu() {
         try {
             FileInputStream fis = new FileInputStream("d:/tmp/MenuList.db");
+            //FileInputStream fis = new FileInputStream("c:/tmp/MenuList.db"); // 노트북
             ObjectInputStream ois = new ObjectInputStream(fis);
             Map<String,MenuInfo2> map = (Map<String,MenuInfo2>) ois.readObject();
             return map;
